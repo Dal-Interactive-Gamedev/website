@@ -81,6 +81,14 @@ a {
     color: var(--page-text-secondary);
     text-decoration: none;
 }
+button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.1rem 0.3rem;
+    background-color: var(--page-primary);
+    color: var(--page-text-secondary);
+    text-decoration: none;
+}
 
 li {
     list-style-type: none;
