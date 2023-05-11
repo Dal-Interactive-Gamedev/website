@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Text Me One", sans-serif;
     font-weight: 600;
 }
+
 h2, h3, h4, h5, h6 {
     border-bottom: var(--page-primary) 4px solid;
 }
@@ -78,6 +79,7 @@ header {
     justify-content: space-evenly;
     width: 40%;
 }
+
 @media only screen and (max-width: 600px){
     .navigation {
         display: flex;
