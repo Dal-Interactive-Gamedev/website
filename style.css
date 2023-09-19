@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Text Me One", sans-serif;
     font-weight: 600;
 }
+
 h2, h3, h4, h5, h6 {
     border-bottom: var(--page-primary) 4px solid;
 }
@@ -73,7 +74,49 @@ header {
     font-size: 2rem;
 }
 
-a {
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px){
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 40%;
+    }
+    .navItem {
+        margin-bottom: 10px;
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.navItem {
+    color: var(--page-primary);
+    font-size: xx-large;
+    margin-right: 20px;
+    padding: 0.1rem 0.3rem;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.navItem:hover {
+    padding: 0.1rem 0.3rem;
+    background-color: var(--page-primary);
+    color: var(--page-text-secondary);
+    text-decoration: none;
+    border-color: var(--page-primary);
+    border-style: solid;
+
+}
+
+.link {
     display: inline-block;
     border-radius: 5px;
     padding: 0.1rem 0.3rem;
@@ -81,6 +124,9 @@ a {
     color: var(--page-text-secondary);
     text-decoration: none;
 }
+
+
+
 button {
     display: inline-block;
     border-radius: 5px;
