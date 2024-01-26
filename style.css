@@ -48,7 +48,7 @@ main {
 
 .logo {
     height: 10rem;
-    
+
     /* Center image */
     display: block;
     margin-left: auto;
@@ -66,21 +66,12 @@ header {
 }
 
 .hero {
+    background-color: var(--page-primary);
     color: var(--page-text-secondary);
-    padding-top: 0.2em;
-    padding-bottom: 0.1em;
+    padding: 5rem;
     margin: 0;
     text-align: center;
-    font-size: 1.5rem;
-    font-family: "Text Me One", sans-serif;
-    background: linear-gradient(90deg, #ff66c4, #ffde59);
-}
-/* Media query for mobile devices */
-@media screen and (max-width: 1000px) {
-    .full-width-image {
-        width: 100%; /* Set the width of the image to 100% on smaller screens */
-        display: block; /* Ensure it takes up the full width */
-    }
+    font-size: 2rem;
 }
 
 .navigation {
@@ -147,10 +138,4 @@ button {
 
 li {
     list-style-type: none;
-}
-a {
-    color: white;
-}
-a:hover {
-    color: var(--page-secondary);
 }
