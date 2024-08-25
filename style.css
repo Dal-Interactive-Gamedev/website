@@ -46,6 +46,8 @@ main {
     }
 }
 
+
+
 .logo {
     height: 10rem;
 
@@ -89,6 +91,11 @@ header {
     }
     .navItem {
         margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .img {
+        width: 100%;
     }
 }
 
