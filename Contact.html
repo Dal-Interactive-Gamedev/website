@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dal Interactive Gamedev</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/logo.svg">
+  <script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_aVxdTwheSqidbH0gdrY8TNu0DOsh9dQqbuRKhstjSQ2', {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+    })
+    </script>
+        <style>
+          .form-group {
+              margin-bottom: 15px;
+          }
+          label {
+              display: block;
+              margin-bottom: 5px;
+              font-weight: bold;
+          }
+          input, textarea {
+              width: 100%;
+              padding: 8px;
+              border: 1px solid #ddd;
+              border-radius: 4px;
+              box-sizing: border-box;
+          }
+          textarea {
+              min-height: 100px;
+          }
+          button {
+              color: white;
+              padding: 10px 15px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              font-size: 16px;
+              width: 100%;
+          }
+          button:hover {
+              background-color: #0c021f;
+          }
+          .success-message {
+              color: green;
+              display: none;
+          }
+          .error-message {
+              color: red;
+              display: none;
+          }
+      </style>
+</head>
+<body>
+  <header class="flex">
+    <a href="index.html"><img src="img/logo.svg" class="logo"></a>
+    <h1 class="centerText">Dal Interactive GameDev</h1>
+    <div class="center">
+        <nav class="navigation">
+            <a class="navItem centerText" href="index.html">Home</a>
+            <a class="navItem centerText" href="Games.html">Games</a>
+            <a class="navItem centerText" href="Training-Zone.html">Training-Zone</a>
+            <a class="navItem centerText" href="Contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+<div class="hero">
+  Making games you'll <em>dig</em>
+</div>
+<br>
+
+<main>
+  <!--    Executives   -->
+  <h2>Contact us</h2>
+  <p>You can contact us at <a class="link" href="mailto:gamedev@dal.ca">gamedev@dal.ca</a> or use the form below </p>
+  <form id="contactForm">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+    
+    <button type="submit">Send Message</button>
+</form>
+
+  <p id="successMessage" class="success-message">Your message has been sent successfully!</p>
+  <p id="errorMessage" class="error-message">There was an error sending your message. Please try again.</p>
+
+  <h2>Executives</h2>
+  <p><a href="" class="link">Simon Losier</a> - President</p>
+  <p><a href="" class="link">Jacob Benedict</a> - Vice-President</p>
+  <p><a href="" class="link">Rosa Huskins</a> - PEO</p>
+
+
+  <h2>Advisory Board</h2>
+  <p><a href="" class="link">Trent Baker</a> - Alumni Advisor</p>
+  <p><a href="" class="link">Kanav Bhardwaj</a> - Alumni Advisor</p>
+  <p><a href="" class="link">Lydia Verboom</a> - Alumni Advisor</p>
+
+</main>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Format the message for Discord
+      const webhookData = {
+          content: "New Contact Form Submission",
+          embeds: [{
+              title: subject,
+              color: 5814783, // A nice blue color
+              fields: [
+                  {
+                      name: "Name",
+                      value: name,
+                      inline: true
+                  },
+                  {
+                      name: "Email",
+                      value: email,
+                      inline: true
+                  },
+                  {
+                      name: "Message",
+                      value: message
+                  }
+              ],
+              footer: {
+                  text: "Sent from your website contact form"
+              },
+              timestamp: new Date().toISOString()
+          }]
+      };
+      
+      // Send to Discord webhook
+      fetch("https://discord.com/api/webhooks/1370111706348392608/7x9tIiOMuzMSTNv4cbBhNU5lVLP48lbqc34_Bhqe25qRyDH3D9K4jmVVpALH7-bKMVcP", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+          },
+          body: JSON.stringify(webhookData)
+      })
+      .then(response => {
+          if (response.ok) {
+              document.getElementById('successMessage').style.display = 'block';
+              document.getElementById('errorMessage').style.display = 'none';
+              document.getElementById('contactForm').reset();
+              
+              // Hide success message after 5 seconds
+              setTimeout(() => {
+                  document.getElementById('successMessage').style.display = 'none';
+              }, 5000);
+          } else {
+              throw new Error('Network response was not ok');
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('errorMessage').style.display = 'block';
+          document.getElementById('successMessage').style.display = 'none';
+          
+          // Hide error message after 5 seconds
+          setTimeout(() => {
+              document.getElementById('errorMessage').style.display = 'none';
+          }, 5000);
+      });
+  });
+</script>
+</body>
+</html>

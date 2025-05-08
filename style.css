@@ -15,6 +15,10 @@
     --page-text-secondary: #fff;
 }
 
+.flex {
+    display: flex;
+}
+
 body {
     font-size: 1.5rem;
     font-family: "Arial", sans-serif;
@@ -53,8 +57,6 @@ main {
 
     /* Center image */
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 header {
@@ -63,6 +65,7 @@ header {
     padding: 1rem;
     margin: 0;
 }
+
 .centerText {
     text-align: center;
 }
@@ -70,7 +73,7 @@ header {
 .hero {
     background-color: var(--page-primary);
     color: var(--page-text-secondary);
-    padding: 5rem;
+    padding: 2rem;
     margin: 0;
     text-align: center;
     font-size: 2rem;
@@ -79,7 +82,6 @@ header {
 .navigation {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
 }
 
 @media only screen and (max-width: 600px){
@@ -87,7 +89,6 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        width: 40%;
     }
     .navItem {
         margin-bottom: 10px;
@@ -104,7 +105,7 @@ header {
     color: var(--page-primary);
     font-size: xx-large;
     margin-right: 20px;
-    padding: 0.1rem 0.3rem;
+    padding: 0.01rem 0.2rem;
     border-style: solid;
     text-decoration: none;
 }
@@ -141,4 +142,52 @@ button {
 
 li {
     list-style-type: none;
+}
+
+
+/* Modify the header flex properties */
+header.flex {
+    display: flex;
+    align-items: center; /* This centers items vertically */
+    padding: 1rem;
+    margin: 0;
+    background-color: var(--page-secondary);
+    color: var(--page-text-secondary);
+}
+
+/* Adjust logo sizing if needed */
+.logo {
+    height: 10rem;
+    display: block;
+}
+
+/* Style the heading */
+h1.centerText {
+    margin: 0; /* Remove default margin to help with alignment */
+    text-align: left; /* Change from center to left for better alignment with logo */
+}
+
+/* Navigation container adjustments */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-left: auto; /* This pushes the navigation to the right */
+}
+
+/* Mobile responsiveness adjustments */
+@media only screen and (max-width: 768px) {
+    header.flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1.centerText {
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+    
+    .center {
+        margin-left: 0;
+        width: 100%;
+    }
 }
